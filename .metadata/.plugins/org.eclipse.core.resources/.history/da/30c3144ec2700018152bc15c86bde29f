@@ -1,0 +1,70 @@
+/*
+ * StateTax has all the state sales taxes for all 50 states of the U.S. and the District of Columbia.
+ * Used to calculate the total for user's entire purchase and whether or not to charge sales tax on tampons.
+ */
+public enum SalesTax {
+	//STATES
+	ALABAMA ("Alabama", 0.0400),
+	ALASKA("Alaska", 0.000),
+	ARIZONA ("Arizona", 0.0560),
+	ARKANSAS ("Arkansas", 0.0650),
+	CALIFORNIA("California", 0.0735),
+	COLORADO("Colorado", 0.0290),
+	CONNETICUT("Connecticut", 0.0635),
+	DELAWARE("Delaware", 0.000),
+	DISTRICT_0F_COLUMBIA("District of Columbia", 0.0575),
+	FLORDIA("Flordia", 0.0600),
+	GEORGIA("Georgia", 0.0400),
+	HAWAII("Hawaii", 0.0400),
+	IDAHO("Idaho", 0.0600),
+	ILLINOIS("Illinois", 0.0625),
+	INDIANA("Indiana", 0.0700),
+	IOWA("Iowa", 0.0600),
+	KANSAS("KANSAS", 0.0650),
+	KENTUCKY("Kentucky", 0.0600),
+	LOUISIANA("Louisiana", 0.0500),
+	MAINE("Maine", 0.0550),
+	MARYLAND("Maryland", 0.0600),
+	MASSACHUSETTS("Massachusetts", 0.0625),
+	MICHIGAN("Michigan", 0.0600),
+	MINNESOTA("Minnesota", 0.06875),
+	MISSISSIPPI("Mississippi",0.0700),
+	MISSOURI("Missouri",0.04225),
+	MONTANA("Montana", 0.000),
+	NEBRASKA("Nebraska", 0.0550),
+	NEVADA("Nevada", 0.0685),
+	NEW_HAMPSHIRE("New Hampshire", 0.000),
+	NEW_JERSEY("New Jersey", 0.06875),
+	NEW_MEXICO("New Mexico", 0.05125),
+	NEW_YORK("New York", 0.0400),
+	NORTH_CAROLINA("North Carolina", 0.0475),
+	NORTH_DAKOTA("North Dakota", 0.0500),
+	OHIO("Ohio", 0.0575),
+	OKLAHOMA("Oklahoma", 0.0450),
+	OREGON("Oregon",0.000),
+	PENNSYLVANIA("Pennsylvania", 0.0600),
+	RHODE_ISLAND("Rhode Island", 0.0700),
+	SOUTH_CAROLINA("South Carolina", 0.0600),
+	SOUTH_DAKOTA("South Dakota", 0.0450),
+	TENNESSEE("Tennesse", 0.0700),
+	TEXAS("Texas", 0.0625),
+	UTAH("Utah", 0.0595),
+	VERMONT("Vermont", 0.0600),
+	VIRGINIA("Virginia", 0.0530),
+	WASHINGTON("Washington", 0.0650),
+	WEST_VIRGINIA("West Virginia", 0.0600),
+	WISCONSIN("WISCONSIN", 0.0500),
+	WYOMING("Wyoming", 0.0400);
+
+	private final String name;
+	private final double salesTax;
+	SalesTax(String name, double salesTax) {
+		this.name = name;
+		this.salesTax = salesTax;
+	}
+	
+	//private enum Exemption {
+		
+//	}
+
+}

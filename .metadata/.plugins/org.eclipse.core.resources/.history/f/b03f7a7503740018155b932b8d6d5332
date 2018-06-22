@@ -1,0 +1,13 @@
+/*
+ * Brand is a collection of Items, which are stored in a list. Includes a method to find the equivalent male Item to a 
+ * female Item. 
+ */
+import java.util.*;
+public class Brand {
+	private String name;
+	public List<Item> items;
+	
+	public Brand (String name, List<Item> items) {
+		
+	}
+}

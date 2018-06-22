@@ -1,0 +1,6 @@
+/*
+ * Brand is a collection of Items, which are stored in a list. 
+ */
+public class Brand {
+
+}

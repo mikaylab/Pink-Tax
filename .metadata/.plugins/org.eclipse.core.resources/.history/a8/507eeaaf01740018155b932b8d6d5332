@@ -1,0 +1,7 @@
+/*
+ * Item represents a product from the store. Each item has a price, description, Brand, name, and ID number.  
+ *
+ */
+public class Item {
+
+}

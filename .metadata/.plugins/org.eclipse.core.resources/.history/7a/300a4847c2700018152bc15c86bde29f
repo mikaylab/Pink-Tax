@@ -1,0 +1,23 @@
+/*
+ * StateTax has all the state sales taxes for all 50 states of the U.S. and the District of Columbia.
+ * Used to calculate the total for user's entire purchase and whether or not to charge sales tax on tampons.
+ */
+public enum SalesTax {
+	//STATES
+	ALABAMA ("Alabama", 0.0400),
+	ALASKA("Alaska", 0.000),
+	ARIZONA ("Arizona", 0.0560),
+	ARKANSAS ("Arkansas", 0.0650),
+	
+	private final String name;
+	private final double salesTax;
+	SalesTax(String name, double salesTax) {
+		this.name = name;
+		this.salesTax = salesTax;
+	}
+	
+	//private enum Exemption {
+		
+//	}
+
+}

@@ -1,0 +1,101 @@
+/*
+ * Item represents a product from the store. Each item has a price, description, brand, type, name, and ID number.  
+ *
+ */
+public class Item extends Object {
+	private double price;
+	private String quantity;
+	private String brand;
+	private int id;
+	private String name;
+	private Type type;
+	enum Gender {
+		MALE("Male"), FEMALE("Female");
+		String gender;
+		Gender(String gender) {
+			this.gender = gender;
+		}
+	}
+	private Gender gender;
+	
+	public Item(double price, String quantiy, String brand, int id, String name, Type type, Gender gender) {
+		this.price = price;
+		this.brand = brand;
+		this.id = id;
+		this.type = type;
+		this.gender = gender;
+	}
+	/**
+	 * Returns the price of the given item.
+	 * @return	price as a double
+	 */
+	public double getPrice() { return price; }
+	/**
+	 * Returns the quantity of the given item.
+	 * @return	quantity as a String
+	 */
+	public String getQuantity() { return quantity; }
+	
+	/**
+	 * Returns the brand of an item
+	 * @return	brand as a string
+	 */
+	public String getBrand() { return brand; }
+	/**
+	 * Sets the brand of the given item to the argument brandName
+	 * @param brandName
+	 */
+	public void setBrand(String brandName) { brand = brandName; }
+	/**
+	 * Returns the ID of the given item
+	 * @return	ID as an integer
+	 */
+	public int getId() { return id; }
+	/**
+	 * Returns the name of the given item
+	 * @return	name as a String
+	 */
+	public String getName() { return name; }
+	/**
+	 * Returns the type of the given item
+	 * @return	type as a string
+	 */
+	public String getType() { return type.toString(); }
+	/**
+	 * Returns a hash code for the given item.
+	 * @return	
+	 */
+	@Override public int hashCode() { 
+		int result = 41;
+		long _price = Double.doubleToLongBits(price);
+		result = 31 * result + (int) (_price ^ (_price >>> 32));
+		result = 31 * result + id;
+		result = 31 * result + brand.hashCode();
+		result = 31 * result + name.hashCode();
+		result = 31 * result + quantity.hashCode();
+		return result;
+	}
+	/**
+	 * Returns the description of the given item as a combination of the name, brand, and quantity of the item.
+	 * @return	description as a String
+	 */
+	public String getDescription() { 
+		String description = "";
+		description += brand + " " + name + ", " + quantity;
+		return description;
+	}
+	/**
+	 * Returns true if the id, price, brand, name, and quantity of o matches with the given item.
+	 */
+	@Override public boolean equals(Object o) {
+		if (!(o instanceof Item)) {
+			return false;
+		}
+		Item item = (Item) o;
+		return item.getId() == id 
+				&& (Double.compare(item.price, price) == 0 ? true : false)
+				&& item.getBrand().equals(brand)
+				&& item.getName().equals(name) 
+				&& item.getQuantity().equals(quantity);
+	}
+}

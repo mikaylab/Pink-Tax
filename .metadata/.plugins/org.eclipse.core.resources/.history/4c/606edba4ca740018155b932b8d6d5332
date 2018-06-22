@@ -1,0 +1,70 @@
+/*
+ * Item represents a product from the store. Each item has a price, description, brand, type, name, and ID number.  
+ *
+ */
+public class Item extends Object {
+	private double price;
+	private String quantity;
+	private String brand;
+	private int id;
+	private String name;
+	private Type type;
+	
+	public Item(double price, String quantiy, String brand, int id, String name, Type type) {
+		this.price = price;
+		this.brand = brand;
+		this.id = id;
+		this.type = type;
+	}
+	/**
+	 * Returns the price of the given item.
+	 * @return	price as a double
+	 */
+	public double getPrice() { return price; }
+	/**
+	 * Returns the quantity of the given item.
+	 * @return	quantity as a String
+	 */
+	public String getQuantity() { return quantity; }
+	
+	/**
+	 * Returns the brand of an item
+	 * @return	brand as a string
+	 */
+	public String getBrand() { return brand; }
+	/**
+	 * Returns the id of the given item
+	 * @return	id as an integer
+	 */
+	public int getId() { return id; }
+	/**
+	 * Returns the name of the given item
+	 * @return	name as a String
+	 */
+	public String getName() { return name; }
+	/**
+	 * Returns the type of the given item
+	 * @return	type as a string
+	 */
+	public String getType() { return type.toString(); }
+	public int getHashCode() { 
+		int result;
+		return result;
+	}
+	/**
+	 * Returns the description of the given item as a combination of the name, brand, and quantity of the item.
+	 * @return	description as a String
+	 */
+	public String getDescription() { 
+		String description = "";
+		description += brand + " " + name + ", " + quantity;
+		return description;
+	}
+	@Override
+	public boolean equals(Object o) {
+		if (!(o instanceof Item)) {
+			return false;
+		}
+		Item item = (Item) o;
+	}
+}

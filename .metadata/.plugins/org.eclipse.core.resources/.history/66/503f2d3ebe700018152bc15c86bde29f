@@ -1,0 +1,7 @@
+/*
+ * StateTax has all the state sales taxes for all 50 states of the U.S. and the District of Columbia.
+ * Used to calculate the total for user's entire purchase and whether or not to charge sales tax on tampons.
+ */
+public enum SalesTax {
+
+}

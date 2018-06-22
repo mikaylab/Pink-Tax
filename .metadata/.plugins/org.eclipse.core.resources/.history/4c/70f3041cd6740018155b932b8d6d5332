@@ -1,0 +1,32 @@
+/*
+ * Brand is a collection of Items, which are stored in a list. Includes a method to find the equivalent male Item to a 
+ * female Item. 
+ */
+import java.util.*;
+public class Brand {
+	private String name;
+	private HashMap<Integer,Item> items = new HashMap<Integer,Item>();
+	
+	public Brand (String name) {
+		this.name = name;
+	}
+	public String getName() { return name; }
+	
+	public int addItem(Item item) {
+		if (item == null) { return -1; }
+		items.put(Integer.valueOf(item.getId()), item);
+		item.setBrand(name);
+		return 0;
+	}
+	public Item getItem(int key) {
+		return items.get(Integer.valueOf(key));
+	}
+	public boolean removeItem(Item i) {
+		i.setBrand(""); // Clear the brand of the item
+		return items.remove(Integer.valueOf(i.getId()), i);
+	}
+	public Item findMatch(int id) {
+		//TODO - match based on name? ID?
+		return null;
+	}
+}

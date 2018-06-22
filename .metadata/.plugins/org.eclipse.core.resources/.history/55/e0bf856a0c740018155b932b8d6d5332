@@ -1,0 +1,6 @@
+/*
+ * Defines all the types of products in the store. 
+ */
+public enum Type {
+	
+}

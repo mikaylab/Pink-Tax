@@ -1,0 +1,12 @@
+/*
+ * Item represents a product from the store. Each item has a price, description, brand, type, name, and ID number.  
+ *
+ */
+public class Item {
+	private double price;
+	private String description;
+	private Brand brand;
+	private int ID;
+	private String name;
+	private String Type;
+}

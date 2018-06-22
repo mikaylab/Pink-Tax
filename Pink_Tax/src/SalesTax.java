@@ -1,7 +1,90 @@
 /*
  * StateTax has all the state sales taxes for all 50 states of the U.S. and the District of Columbia.
- * Used to calculate the total for user's entire purchase and whether or not to charge sales tax on tampons.
+ * Used to calculate the total for user's entire purchase and 
+ * whether or not to charge sales tax on feminine hygiene products.
  */
 public enum SalesTax {
+	//STATES
+	ALABAMA ("Alabama", 0.0400, 'N'),
+	ALASKA("Alaska", 0.000, 'Y'),
+	ARIZONA ("Arizona", 0.0560, 'N'),
+	ARKANSAS ("Arkansas", 0.0650, 'N'),
+	CALIFORNIA("California", 0.0735, 'N'),
+	COLORADO("Colorado", 0.0290, 'N'),
+	CONNETICUT("Connecticut", 0.0635, 'N'),
+	DELAWARE("Delaware", 0.000, 'Y'),
+	DISTRICT_0F_COLUMBIA("District of Columbia", 0.0575, 'Y'),
+	FLORDIA("Flordia", 0.0600, 'Y'),
+	GEORGIA("Georgia", 0.0400, 'N'),
+	HAWAII("Hawaii", 0.0400, 'N'),
+	IDAHO("Idaho", 0.0600, 'N'),
+	ILLINOIS("Illinois", 0.0625, 'Y'),
+	INDIANA("Indiana", 0.0700, 'N'),
+	IOWA("Iowa", 0.0600, 'N'),
+	KANSAS("KANSAS", 0.0650, 'N'),
+	KENTUCKY("Kentucky", 0.0600, 'N'),
+	LOUISIANA("Louisiana", 0.0500, 'N'),
+	MAINE("Maine", 0.0550, 'N'),
+	MARYLAND("Maryland", 0.0600, 'Y'),
+	MASSACHUSETTS("Massachusetts", 0.0625, 'Y'),
+	MICHIGAN("Michigan", 0.0600, 'N'),
+	MINNESOTA("Minnesota", 0.06875, 'Y'),
+	MISSISSIPPI("Mississippi",0.0700, 'N'),
+	MISSOURI("Missouri",0.04225, 'N'),
+	MONTANA("Montana", 0.000, 'Y'),
+	NEBRASKA("Nebraska", 0.0550, 'N'),
+	NEVADA("Nevada", 0.0685, 'N'),
+	NEW_HAMPSHIRE("New Hampshire", 0.000, 'Y'),
+	NEW_JERSEY("New Jersey", 0.06875, 'Y'),
+	NEW_MEXICO("New Mexico", 0.05125, 'N'),
+	NEW_YORK("New York", 0.0400, 'Y'),
+	NORTH_CAROLINA("North Carolina", 0.0475, 'N'),
+	NORTH_DAKOTA("North Dakota", 0.0500, 'N'),
+	OHIO("Ohio", 0.0575, 'N'),
+	OKLAHOMA("Oklahoma", 0.0450, 'N'),
+	OREGON("Oregon", 0.000, 'Y'),
+	PENNSYLVANIA("Pennsylvania", 0.0600, 'Y'),
+	RHODE_ISLAND("Rhode Island", 0.0700, 'N'),
+	SOUTH_CAROLINA("South Carolina", 0.0600, 'N'),
+	SOUTH_DAKOTA("South Dakota", 0.0450, 'N'),
+	TENNESSEE("Tennesse", 0.0700, 'N'),
+	TEXAS("Texas", 0.0625, 'N'),
+	UTAH("Utah", 0.0595, 'N'),
+	VERMONT("Vermont", 0.0600, 'N'),
+	VIRGINIA("Virginia", 0.0530, 'N'),
+	WASHINGTON("Washington", 0.0650, 'N'),
+	WEST_VIRGINIA("West Virginia", 0.0600, 'N'),
+	WISCONSIN("WISCONSIN", 0.0500, 'N'),
+	WYOMING("Wyoming", 0.0400, 'N');
 
+	private final String name;
+	private final double salesTax;
+	private final char exemptionStatus;	// Indicates if feminine hygiene products are included in base sales tax.
+	
+	SalesTax(String name, double salesTax, char exemptionStatus) {
+		this.name = name;
+		this.salesTax = salesTax;
+		this.exemptionStatus = exemptionStatus;
+	}
+	/**
+	 * Returns the name of the state
+	 * @return 	name
+	 */
+	@Override public String toString() {
+		return this.name;
+	}
+	/**
+	 * Returns the sales tax for the given state
+	 * @return	salesTax
+	 */
+	public double getSalesTax() {
+		return this.salesTax;
+	}
+	/**
+	 * Returns true if the given state exempts feminine hygiene products from the base sales tax.
+	 * @return	true if exemptionStatus is 'Y'
+	 */
+	public boolean isExempt() {
+		return this.exemptionStatus == 'Y' ? true : false;
+	}
 }
