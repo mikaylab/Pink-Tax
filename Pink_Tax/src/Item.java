@@ -107,8 +107,7 @@ public class Item extends Object {
 			return false;
 		}
 		Item item = (Item) o;
-		return item.getId() == id 
-				&& (Double.compare(item.price, price) == 0 ? true : false)
+		return item.getId() == id && (Double.compare(item.price, price) == 0 ? true : false)
 				&& item.getBrand().equals(brand)
 				&& item.getName().equals(name) 
 				&& item.getQuantity().equals(quantity);
@@ -120,10 +119,26 @@ public class Item extends Object {
 	 * matching item to compare prices of the two items.
 	 * @return	an Item 
 	 */
-	/*public Item getEquivalent() {
+	private Item getEquivalent() {
 		Item match = new Item(quantity, brand, type, gender.getOpposite());
 		return match;
-	}*/
+	}
+	
+	/**
+	 * Returns true if the argument has the same quantity, brand, type as the caller and the item is targeted 
+	 * for the opposite gender. 
+	 * @param item
+	 * @return	True if equivalent
+	 */
+	public boolean isEquivalent(Item item) {
+		Item match = this.getEquivalent();
+		
+		// True only if item has matching fields to match.
+		return item.getQuantity() == match.getQuantity() 
+				&& item.getBrand() == match.getBrand() 
+				&& item.getType() == match.getType() 
+				&& item.getGender() == match.getGender();
+	}
 }
 enum Gender {
 	MALE("Male"), FEMALE("Female");
