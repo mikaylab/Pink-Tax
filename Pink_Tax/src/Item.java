@@ -108,9 +108,9 @@ public class Item extends Object {
 		}
 		Item item = (Item) o;
 		return item.getId() == id && (Double.compare(item.price, price) == 0 ? true : false)
-				&& item.getBrand().equals(brand)
-				&& item.getName().equals(name) 
-				&& item.getQuantity().equals(quantity);
+				&& item.getBrand().equalsIgnoreCase(brand)
+				&& item.getName().equalsIgnoreCase(name) 
+				&& item.getQuantity().equalsIgnoreCase(quantity);
 	}
 	
 	/**
@@ -141,7 +141,7 @@ public class Item extends Object {
 	}
 }
 enum Gender {
-	MALE("Male"), FEMALE("Female");
+	MALE("M"), FEMALE("F");
 	String name;
 	Gender(String gender) { this.name = gender; }
 	public Gender getOpposite() {

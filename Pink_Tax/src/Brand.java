@@ -64,4 +64,12 @@ public class Brand {
 		}
 		return null;
 	}
+	
+	
+	/**
+	 * 
+	 */
+	public boolean equals(Brand brand) {
+		return this.getName().equalsIgnoreCase(brand.getName());
+	}
 }

@@ -1,0 +1,12 @@
+Dove,Personal Care, Purely Pampering Shea Butter with Warm Vanilla Beauty Bar, F, 24 oz, 9.49
+Dove, Personal Care, Men+Care Aqua Impact Body and Face Bar, M, 24 oz, 9.49
+Dove, Personal Care, Women Anti-Perspirant Deodorant Invisible Solid Shower Clean, F, 2.6 oz, 3.99
+Dove,Personal Care, Men Ultra Dry Anti-Perspirant Deodorant Invisible Stick Sport, M, 2.7 oz, 3.79
+Suave,Personal Care, Professionals Moroccan Infusion Shine Shampoo(& conditioner), F, 12.6 oz, 7.98
+Suave,Personal Care, Professionals Men 2 in 1 Shampoo + Conditioner, M, 12.6 oz, 2.67
+Gillette,Personal Care, Venus Embrace Razor, F, 1, 13.79
+Gillette,Personal Care, Fusion Manual Raxor, M, 1, 9.99
+Nivea,Personal Care, Smooth Sensation Body Lotion Shea Butter & HYDRA IQ, F, 16.9 oz, 6.49
+Nivea, Personal Care, Men Maximum Hydration Body Lotion 2 in 1 Body Face & Hands, M, 16.9 oz, 6.49
+Head & Shoulders, Personal Care, Smooth & Silky 2 in 1 Dandruff Shampoo + Conditioner, F, 23.7 oz, 8.29
+Head & Shoulders, Personal Care, Men Total Care All-in-1 Dandruff Shampoo + Conditioner, M, 23.7 oz, 8.29

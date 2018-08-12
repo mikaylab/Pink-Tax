@@ -14,4 +14,12 @@ public enum Type {
 		this.name = name;
 	}
 	public String getName() { return name; }
+	public static Type matchType(String type) {
+		for (Type t : Type.values()) {
+			if (t.toString().equals(type)) {
+				return t;
+			}
+		}
+		return null;
+	}
 }

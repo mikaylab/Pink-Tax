@@ -21,7 +21,7 @@ public enum SalesTax {
 	ILLINOIS("Illinois", 0.0625, 'Y'),
 	INDIANA("Indiana", 0.0700, 'N'),
 	IOWA("Iowa", 0.0600, 'N'),
-	KANSAS("KANSAS", 0.0650, 'N'),
+	KANSAS("Kansas", 0.0650, 'N'),
 	KENTUCKY("Kentucky", 0.0600, 'N'),
 	LOUISIANA("Louisiana", 0.0500, 'N'),
 	MAINE("Maine", 0.0550, 'N'),
@@ -54,7 +54,7 @@ public enum SalesTax {
 	VIRGINIA("Virginia", 0.0530, 'N'),
 	WASHINGTON("Washington", 0.0650, 'N'),
 	WEST_VIRGINIA("West Virginia", 0.0600, 'N'),
-	WISCONSIN("WISCONSIN", 0.0500, 'N'),
+	WISCONSIN("Wisconsin", 0.0500, 'N'),
 	WYOMING("Wyoming", 0.0400, 'N');
 
 	private final String name;
